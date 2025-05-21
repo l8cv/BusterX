@@ -7,7 +7,8 @@
 <details>
   <summary>Demo</summary>
 
-https://github.com/user-attachments/assets/2baf8c16-7c08-4b18-8bc3-cfa991f33b5c
+https://github.com/user-attachments/assets/f1a3b1aa-545e-493f-9fed-0818dda8df75
+
 </details>
 
 ### Citation 
