@@ -1,27 +1,30 @@
-<div align="center">
-<h1> BusterX </h1>
-</div>
+# BusterX
 
-### Coming Soon
+[\[🚀🤗BusterX++\]](https://huggingface.co/l8cv/BusterX_plusplus)
+[\[📦️🤗GenBuster++\]](https://huggingface.co/datasets/l8cv/GenBuster_plusplus)
+[\[📦️🤗GenBuster-200K\]](https://huggingface.co/datasets/l8cv/GenBuster-200K)
+[\[🔥BusterX++ paper\]]()
+[\[🔥BusterX paper\]](https://www.alphaxiv.org/abs/2505.12620)
 
-<details>
-  <summary>Demo</summary>
+Github repo for
+- **BusterX++**: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM
+- **BusterX**: MLLM-Powered AI-Generated Video Forgery Detection and Explanation
 
-https://github.com/user-attachments/assets/f1a3b1aa-545e-493f-9fed-0818dda8df75
+### News 🎉
+- `2025/07/19`: 🚀 We introduce [BusterX++](), an advanced MLLM for unified cross-modal AIGC detection and explanation~
 
-</details>
 
-### Citation 
+### Citation
 
 ```
 @misc{wen2025busterxmllmpoweredaigeneratedvideo,
-      title={BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation}, 
+      title={BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation},
       author={Haiquan Wen and Yiwei He and Zhenglin Huang and Tianxiao Li and Zihan Yu and Xingru Huang and Lu Qi and Baoyuan Wu and Xiangtai Li and Guangliang Cheng},
       year={2025},
       eprint={2505.12620},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.12620}, 
+      url={https://arxiv.org/abs/2505.12620},
 }
 ```
 
