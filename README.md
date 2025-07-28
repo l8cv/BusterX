@@ -17,24 +17,18 @@ Github repo for
 ### Citation
 
 ```
-@misc{wen2025busterxunifiedcrossmodalaigenerated,
-      title={BusterX++: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM}, 
-      author={Haiquan Wen and Tianxiao Li and Zhenglin Huang and Yiwei He and Guangliang Cheng},
-      year={2025},
-      eprint={2507.14632},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2507.14632}, 
+@article{wen2025busterxunifiedcrossmodalaigenerated,
+    title={BusterX++: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM}, 
+    author={Haiquan Wen and Tianxiao Li and Zhenglin Huang and Yiwei He and Guangliang Cheng},
+    journal={Arxiv},
+    year={2025},
 }
 
-@misc{wen2025busterxmllmpoweredaigeneratedvideo,
-      title={BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation},
-      author={Haiquan Wen and Yiwei He and Zhenglin Huang and Tianxiao Li and Zihan Yu and Xingru Huang and Lu Qi and Baoyuan Wu and Xiangtai Li and Guangliang Cheng},
-      year={2025},
-      eprint={2505.12620},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.12620},
+@article{wen2025busterxmllmpoweredaigeneratedvideo,
+    title={BusterX: MLLM-Powered AI-Generated Video Forgery Detection and Explanation},
+    author={Haiquan Wen and Yiwei He and Zhenglin Huang and Tianxiao Li and Zihan Yu and Xingru Huang and Lu Qi and Baoyuan Wu and Xiangtai Li and Guangliang Cheng},
+    journal={Arxiv},
+    year={2025},
 }
 ```
 
