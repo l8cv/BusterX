@@ -3,6 +3,7 @@
 [\[🚀🤗BusterX++\]](https://huggingface.co/l8cv/BusterX_plusplus)
 [\[📦️🤗GenBuster++\]](https://huggingface.co/datasets/l8cv/GenBuster_plusplus)
 [\[📦️🤗GenBuster-200K\]](https://huggingface.co/datasets/l8cv/GenBuster-200K)
+[\[📦️🤗GenBuster-200K-mini\]](https://huggingface.co/datasets/l8cv/GenBuster-200K-mini)
 [\[🔥📜BusterX++ paper\]](https://www.alphaxiv.org/abs/2507.14632)
 [\[🔥📜BusterX paper\]](https://www.alphaxiv.org/abs/2505.12620)
 
@@ -13,6 +14,8 @@ Github repo for
 ### News 🎉
 - `2025/07/19`: 🚀 We introduce [BusterX++](https://www.alphaxiv.org/abs/2507.14632), an advanced MLLM for unified cross-modal AIGC detection and explanation~
 
+> [!IMPORTANT]  
+> **GenBuster-200K-mini** is now available on Hugging Face! This mini version includes a subset of the training data along with the complete test and benchmark, perfect for quick experimentation and evaluation. Download it here: [\[📦️🤗GenBuster-200K-mini\]](https://huggingface.co/datasets/l8cv/GenBuster-200K-mini)
 
 ### Citation
 
