@@ -14,7 +14,7 @@ Github repo for
 
 
 > [!IMPORTANT]
-> We release the 2026/03 Revised Edition of BusterX. This update introduces **GenBuster-Bench**, a progressive diagnostic benchmark covering In-Domain (test in old ver.), Out-of-Domain (closed benchmark in old ver.), and In-the-Wild tracks.
+> We release the 2026/03 Revised Edition of BusterX. This update introduces **GenBuster-Bench**, a progressive diagnostic benchmark covering In-Domain (test in old ver.), Out-of-Domain (closed benchmark in old ver.), and In-the-Wild tracks. Download it here: [\[📦️🤗GenBuster-Bench\]](https://huggingface.co/datasets/l8cv/GenBuster-Bench)
 
 > [!IMPORTANT]
 > **GenBuster-200K-mini** is now available on Hugging Face! This mini version includes a subset of the training data along with the complete test and benchmark, perfect for quick experimentation and evaluation. Download it here: [\[📦️🤗GenBuster-200K-mini\]](https://huggingface.co/datasets/l8cv/GenBuster-200K-mini)
