@@ -4,28 +4,26 @@
 
 </div>
 
-**MLLM-Powered AI-Generated Content Detection and Explanation**
-
-[![Paper](https://img.shields.io/badge/Paper-BusterX++-red?logo=arxiv)](https://www.alphaxiv.org/abs/2507.14632)
-[![Paper](https://img.shields.io/badge/Paper-BusterX-red?logo=arxiv)](https://www.alphaxiv.org/abs/2505.12620)
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97-BusterX++-orange)](https://huggingface.co/l8cv/BusterX-plusplus)
-[![Benchmark](https://img.shields.io/badge/%F0%9F%93%A6-GenBuster_Bench++-blue)](https://huggingface.co/datasets/l8cv/GenBuster-Bench-plusplus)
-[![Benchmark](https://img.shields.io/badge/%F0%9F%93%A6-GenBuster_Bench-blue)](https://huggingface.co/datasets/l8cv/GenBuster-Bench)
-[![Dataset](https://img.shields.io/badge/%F0%9F%93%A6-GenBuster_Unified-blue)](https://huggingface.co/datasets/l8cv/GenBuster-Unified)
-[![Dataset](https://img.shields.io/badge/%F0%9F%93%A6-GenBuster_200K-blue)](https://huggingface.co/datasets/l8cv/GenBuster-200K)
-[![License](https://img.shields.io/badge/License-BSD_3--Clause-green)](LICENSE)
+[[🚀🤗BusterX++]](https://huggingface.co/l8cv/BusterX-plusplus)
+[[📦️🤗GenBuster-Bench++]](https://huggingface.co/datasets/l8cv/GenBuster-Bench-plusplus)
+[[📦️🤗GenBuster-Bench]](https://huggingface.co/datasets/l8cv/GenBuster-Bench)
+[[📦️🤗GenBuster-Unified]](https://huggingface.co/datasets/l8cv/GenBuster-Unified)
+[[📦️🤗GenBuster-200K]](https://huggingface.co/datasets/l8cv/GenBuster-200K)
+[[📦️🤗GenBuster-200K-mini]](https://huggingface.co/datasets/l8cv/GenBuster-200K-mini)
+[[🔥📜BusterX++ paper]](https://www.alphaxiv.org/abs/2507.14632)
+[[🔥📜BusterX paper]](https://www.alphaxiv.org/abs/2505.12620)
 
 ______________________________________________________________________
 
 ## Overview
 
-BusterX is a family of MLLM-based methods for detecting and explaining AI-generated content across multiple modalities. The project includes:
+BusterX is a family of MLLM-based methods for detecting and explaining AI-generated content. The project includes:
 
-- **BusterX++** — Unified cross-modal AIGC detection and explanation (images + videos) with MLLM
-- **BusterX** — MLLM-powered AI-generated video forgery detection and explanation
+- **BusterX++**: Towards Unified Cross-Modal AI-Generated Content Detection and Explanation with MLLM
+- **BusterX**: MLLM-Powered AI-Generated Video Forgery Detection and Explanation
 
 > [!IMPORTANT]
-> We release the **2026/06 Revised Edition** of BusterX and BusterX++. Base models have been updated to the latest Qwen3.5, and the datasets and benchmarks have been updated. This edition includes training code, evaluation code, and BusterX++ (2026).
+> We release the **2026/06 Revised Edition** of BusterX and BusterX++. Base models have been updated to the latest Qwen3.5, and the datasets and benchmarks have been updated.
 
 ## Installation
 
@@ -52,7 +50,7 @@ The default settings is for 8xH100 80GB, you may need to adjust some hyperparame
 ### Evaluate BusterX++ on GenBuster-Bench:
 
 ```bash
-scripts/eval_genbuster_bench_plusplus.sh l8cv/BusterX-plusplus
+bash scripts/eval_genbuster_bench_plusplus.sh l8cv/BusterX-plusplus
 ```
 
 ### Train with DAPO:
@@ -60,11 +58,11 @@ scripts/eval_genbuster_bench_plusplus.sh l8cv/BusterX-plusplus
 We suggest use server rollout mode for stability and efficiency.
 
 ```bash
-scripts/rollout.sh
+bash scripts/rollout.sh
 ```
 
 ```bash
-scripts/train_dapo
+bash scripts/train_dapo
 ```
 
 ## Citation
