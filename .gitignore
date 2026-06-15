@@ -172,7 +172,7 @@ cython_debug/
 /wandb*
 /result*
 /Qwen*
-/GVF_part
+/data/genbuster*
 
 # BusterX cache
 .busterx_cache/
