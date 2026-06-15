@@ -27,42 +27,73 @@ BusterX is a family of MLLM-based methods for detecting and explaining AI-genera
 
 ## Installation
 
-We use uv to manage the environment, the default CUDA version is 12.x, you may need to specify another version -- check [pyproject.toml](pyproject.toml) for details.
+We use [uv](https://docs.astral.sh/uv/) for environment management. The default CUDA version is 12.x; check [`pyproject.toml`](pyproject.toml) if you need a different CUDA version.
 
 ```bash
 # pip install uv
 uv sync
 ```
 
-## Prepare Datasets and Benchmarks
+## Dataset & Benchmark Preparation
+
+Log in to Hugging Face (make sure you have access to the gated datasets and models), then download and build all datasets:
 
 ```bash
-# login hf, please make sure you have the proper permissions to access the datasets and models
 make login
 make fetch_data
 make build_all_datasets
 ```
 
+Available datasets and benchmarks:
+
+| Name | Description |
+|---|---|
+| GenBuster-200K / 200K-mini | Large-scale video training data |
+| GenBuster-Unified | Image + video training data |
+| GenBuster-Bench | Video-only evaluation benchmark |
+| GenBuster-Bench++ | Cross-modal (image + video) evaluation benchmark |
+
 ## Quick Start
 
-The default settings is for 8xH100 80GB, you may need to adjust some hyperparameters.
+> Default settings target 8×H100 80GB. Adjust hyperparameters as needed.
 
-### Evaluate BusterX++ on GenBuster-Bench:
+### Evaluate BusterX++ on GenBuster-Bench
 
 ```bash
 bash scripts/eval_genbuster_bench.sh l8cv/BusterX-plusplus
 ```
 
-### Train with DAPO:
+For cross-modal evaluation on GenBuster-Bench++:
 
-We suggest use server rollout mode for stability and efficiency.
+```bash
+bash scripts/eval_genbuster_bench_plusplus.sh l8cv/BusterX-plusplus
+```
+
+### Train with DAPO
+
+We recommend server rollout mode for stability and efficiency. Start the rollout server first:
 
 ```bash
 bash scripts/rollout.sh
 ```
 
+Then launch training:
+
 ```bash
-bash scripts/train_dapo
+bash scripts/train_dapo.sh
+```
+
+GSPO training is also supported:
+
+```bash
+bash scripts/train_gspo.sh
+```
+
+### Custom Benchmark Evaluation
+
+```bash
+make build_custom_benchmark
+bash scripts/eval_custom_benchmark.sh <model>
 ```
 
 ## Citation
