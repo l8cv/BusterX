@@ -1,0 +1,41 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v6.0.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-json
+  - id: check-yaml
+  - id: check-xml
+  - id: check-toml
+  - id: pretty-format-json
+
+- repo: https://github.com/executablebooks/mdformat
+  rev: 1.0.0
+  hooks:
+  - id: mdformat
+
+- repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+  rev: v2.16.0
+  hooks:
+  - id: pretty-format-yaml
+    args: [--autofix]
+  - id: pretty-format-toml
+    args: [--autofix]
+    exclude: ^uv\.lock$
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.13.1
+  hooks:
+  - id: ruff-format
+  - id: ruff
+    args: [--fix, --exit-non-zero-on-fix]
+
+- repo: local
+  hooks:
+  - id: mypy
+    name: mypy (uv)
+    entry: uv run --no-sync mypy busterx tests
+    language: system
+    types: [python]
+    pass_filenames: false
