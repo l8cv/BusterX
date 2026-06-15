@@ -50,7 +50,7 @@ The default settings is for 8xH100 80GB, you may need to adjust some hyperparame
 ### Evaluate BusterX++ on GenBuster-Bench:
 
 ```bash
-bash scripts/eval_genbuster_bench_plusplus.sh l8cv/BusterX-plusplus
+bash scripts/eval_genbuster_bench.sh l8cv/BusterX-plusplus
 ```
 
 ### Train with DAPO:
