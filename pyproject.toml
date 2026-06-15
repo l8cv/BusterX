@@ -1,0 +1,183 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[dependency-groups]
+dev = [
+  "torch==2.11.0",
+  "torchvision==0.26.0",
+  "torchaudio==2.11.0",
+  # Stable: pin an exact version on [[tool.uv.index]] and use the line below
+  "vllm",
+  # Nightly: switch to the line below (and switch the index in [tool.uv.sources])
+  # "vllm",
+  # override ms-swift and transformers version in [tool.uv.override-dependencies] to get the latest features
+  "ms-swift @ git+https://github.com/modelscope/ms-swift@a884c6f22339d041623e205032cb3dbd854eb085",
+  "transformers==5.8.1",
+  "qwen_vl_utils==0.0.14",
+  "qwen_omni_utils==0.0.9",
+  "decord==0.6.0; sys_platform != 'darwin'",
+  "tabulate==0.10.0",
+  "omegaconf",
+  "loguru",
+  "tqdm",
+  "python-dotenv",
+  "math-verify",
+  # Training dependencies
+  "deepspeed",
+  "wandb",
+  "bitsandbytes",
+  "weave",
+  # "mergekit==0.1.4",
+  # "llm-blender",
+  # Training dependencies for Qwen3.5
+  # Raise err from FLA 0.5.0
+  # RuntimeError: Triton >= 3.4.0 on Hopper GPUs produces incorrect results for gated chunk_bwd_dqkwg (see #640). Please install tilelang: `pip install tilelang
+  # "tilelang"
+  # "flash-attn-4==4.0.0b12"
+  "flash-linear-attention==0.4.2",
+  "causal_conv1d"
+]
+test = [
+  "coverage",
+  "pytest",
+  "pytest-cov"
+]
+typing = [
+  "pre-commit",
+  "mypy",
+  "ruff",
+  "types-tabulate"
+]
+
+[project]
+authors = [{name = "Haiquan Wen"}]
+classifiers = [
+  "Programming Language :: Python :: 3.12"
+]
+dependencies = [
+]
+description = "BusterX"
+name = "busterx"
+readme = "README.md"
+requires-python = "==3.12.*"
+version = "0.0.1"
+
+[project.scripts]
+busterx = "busterx.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/l8cv/BusterX"
+Repository = "https://github.com/l8cv/BusterX"
+
+[tool.coverage.report]
+exclude_also = [
+  "raise AssertionError",
+  "raise NotImplementedError",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+  "except Exception as e"
+]
+
+[tool.coverage.run]
+omit = [
+  "busterx/__main__.py"
+]
+
+[tool.hatch.build.sources]
+"busterx" = "busterx"
+
+[tool.hatch.build.targets.sdist]
+include = ["busterx"]
+
+[tool.hatch.build.targets.wheel]
+include = ["busterx"]
+
+[tool.mypy]
+disable_error_code = "attr-defined"
+disallow_any_generics = false
+disallow_subclassing_any = false
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+strict = true
+warn_return_any = false
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint]
+extend-ignore = [
+  "B018",
+  "B019",
+  "RUF001",
+  "PGH003",
+  "PGH004",
+  "RUF003",
+  "E402",
+  "RUF002",
+  "B904"
+]
+extend-select = [
+  "I",  # isort
+  "B",  # flake8-bugbear
+  "C4",  # flake8-comprehensions
+  "PGH",  # pygrep-hooks
+  "RUF",  # ruff
+  "W",  # pycodestyle
+  "YTT"  # flake8-2020
+]
+fixable = ["ALL"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.per-file-ignores]
+"**/__init__.py" = ["F401", "F403"]
+
+[tool.uv]
+default-groups = [
+  "dev",
+  "test",
+  "typing"
+]
+override-dependencies = [
+  # "transformers==5.8.0",
+  "trl==0.29.1"
+]
+prerelease = "if-necessary-or-explicit"
+
+[[tool.uv.index]]
+explicit = true
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu129"
+
+[[tool.uv.index]]
+explicit = true
+name = "vllm-stable"
+url = "https://wheels.vllm.ai/0.22.0/cu129"
+
+[tool.uv.sources]
+causal_conv1d = [
+  {url = "https://github.com/qthequartermasterman/causal-conv1d/releases/download/v1.6.2.post1/causal_conv1d-1.6.2.post1+cu12torch2.11cxx11abiTRUE-cp312-cp312-linux_x86_64.whl"}
+]
+torch = [
+  {index = "pytorch-cuda", marker = "sys_platform != 'darwin'"}
+]
+torchaudio = [
+  {index = "pytorch-cuda", marker = "sys_platform != 'darwin'"}
+]
+torchvision = [
+  {index = "pytorch-cuda", marker = "sys_platform != 'darwin'"}
+]
+vllm = [
+  {index = "vllm-stable", marker = "sys_platform == 'linux'"}
+]

@@ -1,0 +1,10 @@
+<video>
+Please analyze whether there are any inconsistencies or obvious signs of forgery in the video, and finally come to a conclusion: Is this video real or fake?
+
+Then, just answer this MCQ with a single letter:
+Q: Is this video real or fake?
+Options:
+A) real
+B) fake
+
+Put the final answer in \\boxed{...}

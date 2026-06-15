@@ -1,0 +1,10 @@
+<image>
+Please analyze whether there are any inconsistencies or obvious signs of forgery in the image, and finally come to a conclusion: Is this image real or fake?
+
+Then, just answer this MCQ with a single letter:
+Q: Is this image real or fake?
+Options:
+A) real
+B) fake
+
+Put the final answer in \\boxed{...}
