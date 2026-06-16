@@ -1,0 +1,32 @@
+name: ci
+
+on:
+  push:
+    branches:
+    - main
+    paths-ignore:
+    - '**.md'
+    - LICENSE
+  pull_request:
+    paths-ignore:
+    - '**.md'
+    - LICENSE
+  workflow_dispatch:
+
+jobs:
+  ci:
+    strategy:
+      matrix:
+        os-version: [ubuntu-latest]
+
+    runs-on: ${{ matrix.os-version }}
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: lint
+      run: |
+        pip install uv
+        uv sync
+        make lint
